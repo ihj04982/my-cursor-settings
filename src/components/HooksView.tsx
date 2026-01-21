@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Code, FileCode } from 'lucide-react';
 import type { Hook } from '../utils/configLoader';
 import SectionHeader from './SectionHeader';
@@ -9,10 +10,10 @@ interface HooksViewProps {
 
 const CARD_BASE_CLASSES = 'bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border hover:shadow-lg transition-all';
 
-export default function HooksView({ hooks }: HooksViewProps) {
+function HooksView({ hooks }: HooksViewProps) {
   return (
     <div>
-      <SectionHeader title="Hooks" count={hooks.length} itemLabel="훅" />
+      <SectionHeader title="Hooks" count={hooks.length} itemLabel="훅" postfix="이" />
 
       <div className="space-y-4">
         {hooks.map((hook) => {
@@ -57,3 +58,5 @@ export default function HooksView({ hooks }: HooksViewProps) {
     </div>
   );
 }
+
+export default memo(HooksView);

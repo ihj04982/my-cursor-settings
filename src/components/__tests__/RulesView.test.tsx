@@ -27,8 +27,8 @@ describe('RulesView', () => {
     render(<RulesView rules={mockRules} />);
 
     expect(screen.getByText('Rules')).toBeInTheDocument();
-    const countElements = screen.getAllByText((content, element) => {
-      return (element?.textContent?.includes('총') && element?.textContent?.includes('이(가) 설정되어 있습니다')) ?? false;
+    const countElements = screen.getAllByText((_, element) => {
+      return (element?.textContent?.includes('총') && element?.textContent?.includes('규칙이 설정되어 있습니다')) ?? false;
     });
     expect(countElements.length).toBeGreaterThan(0);
   });
@@ -53,8 +53,8 @@ describe('RulesView', () => {
     render(<RulesView rules={[]} />);
 
     expect(screen.getByText('Rules')).toBeInTheDocument();
-    const countElements = screen.getAllByText((content, element) => {
-      return (element?.textContent?.includes('총') && element?.textContent?.includes('이(가) 설정되어 있습니다')) ?? false;
+    const countElements = screen.getAllByText((_, element) => {
+      return (element?.textContent?.includes('총') && element?.textContent?.includes('규칙이 설정되어 있습니다')) ?? false;
     });
     expect(countElements.length).toBeGreaterThan(0);
   });
@@ -65,7 +65,7 @@ describe('RulesView', () => {
 
     expect(screen.getByText(singleRule[0].title)).toBeInTheDocument();
     expect(screen.getByText(singleRule[0].content)).toBeInTheDocument();
-    expect(screen.getByText(/총.*이\(가\) 설정되어 있습니다/)).toBeInTheDocument();
+    expect(screen.getByText(/총.*규칙이 설정되어 있습니다/)).toBeInTheDocument();
   });
 
   it('should handle rules with empty content', () => {

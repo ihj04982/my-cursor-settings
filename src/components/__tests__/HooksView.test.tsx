@@ -32,7 +32,7 @@ describe('HooksView', () => {
 
     expect(screen.getByText('Hooks')).toBeInTheDocument();
     const countElements = screen.getAllByText((content, element) => {
-      return (element?.textContent?.includes('총') && element?.textContent?.includes('이(가) 설정되어 있습니다')) ?? false;
+      return (element?.textContent?.includes('총') && element?.textContent?.includes('훅이 설정되어 있습니다')) ?? false;
     });
     expect(countElements.length).toBeGreaterThan(0);
   });
@@ -69,7 +69,7 @@ describe('HooksView', () => {
 
     expect(screen.getByText('Hooks')).toBeInTheDocument();
     const countElements = screen.getAllByText((content, element) => {
-      return (element?.textContent?.includes('총') && element?.textContent?.includes('이(가) 설정되어 있습니다')) ?? false;
+      return (element?.textContent?.includes('총') && element?.textContent?.includes('훅이 설정되어 있습니다')) ?? false;
     });
     expect(countElements.length).toBeGreaterThan(0);
   });
@@ -93,7 +93,7 @@ describe('HooksView', () => {
     render(<HooksView hooks={singleHook} />);
 
     expect(screen.getByText('명령 실행 전')).toBeInTheDocument();
-    expect(screen.getByText(/총.*이\(가\) 설정되어 있습니다/)).toBeInTheDocument();
+    expect(screen.getByText(/총.*훅이 설정되어 있습니다/)).toBeInTheDocument();
   });
 
   it('should handle all hook types with proper labels', () => {

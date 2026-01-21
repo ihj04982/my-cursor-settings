@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Bot } from 'lucide-react';
 import type { Agent } from '../utils/configLoader';
 import SectionHeader from './SectionHeader';
@@ -10,10 +11,10 @@ interface AgentsViewProps {
 const CARD_CLASSES =
   'bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/50 transition-all hover:shadow-lg hover:shadow-purple-500/20';
 
-export default function AgentsView({ agents }: AgentsViewProps) {
+function AgentsView({ agents }: AgentsViewProps) {
   return (
     <div>
-      <SectionHeader title="Agents" count={agents.length} itemLabel="에이전트" />
+      <SectionHeader title="Agents" count={agents.length} itemLabel="에이전트" postfix="가" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {agents.map((agent) => (
@@ -27,7 +28,7 @@ export default function AgentsView({ agents }: AgentsViewProps) {
                   <h3 className="text-xl font-bold text-white">{agent.name}</h3>
                   <span
                     className={`inline-block px-2 py-1 text-xs font-semibold rounded-full text-white ${
-                      MODEL_COLORS[agent.model] || 'bg-gradient-to-r from-gray-600 to-slate-600'
+                      MODEL_COLORS[agent.model] || 'bg-linear-to-r from-gray-600 to-slate-600'
                     }`}
                   >
                     {agent.model}
@@ -57,3 +58,5 @@ export default function AgentsView({ agents }: AgentsViewProps) {
     </div>
   );
 }
+
+export default memo(AgentsView);

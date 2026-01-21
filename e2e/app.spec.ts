@@ -32,9 +32,9 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     await page.waitForLoadState('networkidle');
     
     // 네비게이션 탭 확인
-    await expect(page.getByRole('button', { name: 'Agents' })).toBeVisible();
-    await expect(page.getByRole('button', { name: 'Hooks' })).toBeVisible();
-    await expect(page.getByRole('button', { name: 'Rules' })).toBeVisible();
+    await expect(page.getByRole('tab', { name: 'Agents' })).toBeVisible();
+    await expect(page.getByRole('tab', { name: 'Hooks' })).toBeVisible();
+    await expect(page.getByRole('tab', { name: 'Rules' })).toBeVisible();
   });
 
   test('should show Agents view by default', async ({ page }) => {
@@ -52,7 +52,7 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     await page.waitForLoadState('networkidle');
     
     // Hooks 탭 클릭
-    await page.getByRole('button', { name: 'Hooks' }).click();
+    await page.getByRole('tab', { name: 'Hooks' }).click();
     
     // Hooks 뷰가 표시되는지 확인
     await expect(page.getByRole('heading', { name: 'Hooks' })).toBeVisible();
@@ -62,7 +62,7 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     expect(hooksCount).toContain('개');
     
     // Hooks 뷰에서 네비게이션 버튼이 활성화되어 있는지 확인
-    const hooksButton = page.getByRole('button', { name: 'Hooks' });
+    const hooksButton = page.getByRole('tab', { name: 'Hooks' });
     await expect(hooksButton).toHaveClass(/border-purple-400/);
   });
 
@@ -70,7 +70,7 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     await page.waitForLoadState('networkidle');
     
     // Rules 탭 클릭
-    await page.getByRole('button', { name: 'Rules' }).click();
+    await page.getByRole('tab', { name: 'Rules' }).click();
     
     // Rules 뷰가 표시되는지 확인
     await expect(page.getByRole('heading', { name: 'Rules' })).toBeVisible();
@@ -80,7 +80,7 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     expect(rulesCount).toContain('개');
     
     // Rules 뷰에서 네비게이션 버튼이 활성화되어 있는지 확인
-    const rulesButton = page.getByRole('button', { name: 'Rules' });
+    const rulesButton = page.getByRole('tab', { name: 'Rules' });
     await expect(rulesButton).toHaveClass(/border-purple-400/);
   });
 
@@ -88,15 +88,15 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     await page.waitForLoadState('networkidle');
     
     // Agents -> Hooks
-    await page.getByRole('button', { name: 'Hooks' }).click();
+    await page.getByRole('tab', { name: 'Hooks' }).click();
     await expect(page.getByRole('heading', { name: 'Hooks' })).toBeVisible();
     
     // Hooks -> Rules
-    await page.getByRole('button', { name: 'Rules' }).click();
+    await page.getByRole('tab', { name: 'Rules' }).click();
     await expect(page.getByRole('heading', { name: 'Rules' })).toBeVisible();
     
     // Rules -> Agents
-    await page.getByRole('button', { name: 'Agents' }).click();
+    await page.getByRole('tab', { name: 'Agents' }).click();
     await expect(page.getByRole('heading', { name: 'Agents' })).toBeVisible();
   });
 
@@ -116,7 +116,7 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     await page.waitForLoadState('networkidle');
     
     // Hooks 뷰로 이동
-    await page.getByRole('button', { name: 'Hooks' }).click();
+    await page.getByRole('tab', { name: 'Hooks' }).click();
     
     // Hooks 카드가 있는지 확인
     const hookCommands = page.locator('code', { hasText: 'bash .cursor/hooks' });
@@ -127,7 +127,7 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     await page.waitForLoadState('networkidle');
     
     // Rules 뷰로 이동
-    await page.getByRole('button', { name: 'Rules' }).click();
+    await page.getByRole('tab', { name: 'Rules' }).click();
     
     // Rules 카드가 있는지 확인
     const ruleTitles = page.locator('text=/Hooks System|Testing Requirements|Security Guidelines/');
@@ -138,14 +138,14 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     await page.waitForLoadState('networkidle');
     
     // Agents 탭이 기본 활성화되어 있는지 확인
-    const agentsButton = page.getByRole('button', { name: 'Agents' });
+    const agentsButton = page.getByRole('tab', { name: 'Agents' });
     await expect(agentsButton).toHaveClass(/border-purple-400/);
     
     // Hooks 탭 클릭
-    await page.getByRole('button', { name: 'Hooks' }).click();
+    await page.getByRole('tab', { name: 'Hooks' }).click();
     
     // Hooks 탭이 활성화되고 Agents 탭이 비활성화되었는지 확인
-    const hooksButton = page.getByRole('button', { name: 'Hooks' });
+    const hooksButton = page.getByRole('tab', { name: 'Hooks' });
     await expect(hooksButton).toHaveClass(/border-purple-400/);
     await expect(agentsButton).not.toHaveClass(/border-purple-400/);
   });
@@ -158,7 +158,7 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     await expect(page.getByRole('heading', { name: 'Cursor 설정 시각화' })).toBeVisible();
     
     // 모바일에서도 네비게이션이 표시되는지 확인
-    await expect(page.getByRole('button', { name: 'Agents' })).toBeVisible();
+    await expect(page.getByRole('tab', { name: 'Agents' })).toBeVisible();
   });
 
   test('should handle view switching without data loss', async ({ page }) => {
@@ -169,11 +169,11 @@ test.describe('Cursor Settings Visualizer E2E', () => {
     const agentsText = await page.locator('text=/개의 에이전트가 설정되어 있습니다/').textContent();
     
     // Hooks 뷰로 이동
-    await page.getByRole('button', { name: 'Hooks' }).click();
+    await page.getByRole('tab', { name: 'Hooks' }).click();
     await expect(page.getByRole('heading', { name: 'Hooks' })).toBeVisible();
     
     // 다시 Agents 뷰로 돌아가서 데이터가 유지되는지 확인
-    await page.getByRole('button', { name: 'Agents' }).click();
+    await page.getByRole('tab', { name: 'Agents' }).click();
     await expect(page.getByRole('heading', { name: 'Agents' })).toBeVisible();
     const agentsTextAfter = await page.locator('text=/개의 에이전트가 설정되어 있습니다/').textContent();
     expect(agentsTextAfter).toBe(agentsText);

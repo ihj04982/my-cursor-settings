@@ -30,7 +30,7 @@ describe('AgentsView', () => {
 
     expect(screen.getByText('Agents')).toBeInTheDocument();
     const countElements = screen.getAllByText((content, element) => {
-      return (element?.textContent?.includes('총') && element?.textContent?.includes('이(가) 설정되어 있습니다')) ?? false;
+      return (element?.textContent?.includes('총') && element?.textContent?.includes('에이전트가 설정되어 있습니다')) ?? false;
     });
     expect(countElements.length).toBeGreaterThan(0);
   });
@@ -76,7 +76,7 @@ describe('AgentsView', () => {
 
     expect(screen.getByText('Agents')).toBeInTheDocument();
     const countElements = screen.getAllByText((content, element) => {
-      return (element?.textContent?.includes('총') && element?.textContent?.includes('이(가) 설정되어 있습니다')) ?? false;
+      return (element?.textContent?.includes('총') && element?.textContent?.includes('에이전트가 설정되어 있습니다')) ?? false;
     });
     expect(countElements.length).toBeGreaterThan(0);
   });
@@ -86,7 +86,7 @@ describe('AgentsView', () => {
     render(<AgentsView agents={singleAgent} />);
 
     expect(screen.getByText(singleAgent[0].name)).toBeInTheDocument();
-    expect(screen.getByText(/총.*이\(가\) 설정되어 있습니다/)).toBeInTheDocument();
+    expect(screen.getByText(/총.*에이전트가 설정되어 있습니다/)).toBeInTheDocument();
   });
 
   it('should render agent with empty tools array', () => {
