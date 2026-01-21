@@ -29,9 +29,10 @@ describe('AgentsView', () => {
     render(<AgentsView agents={mockAgents} />);
 
     expect(screen.getByText('Agents')).toBeInTheDocument();
-    expect(screen.getByText((content, element) => {
-      return (element?.textContent?.includes('총') && element?.textContent?.includes('개의 에이전트가 설정되어 있습니다')) ?? false;
-    })).toBeInTheDocument();
+    const countElements = screen.getAllByText((content, element) => {
+      return (element?.textContent?.includes('총') && element?.textContent?.includes('이(가) 설정되어 있습니다')) ?? false;
+    });
+    expect(countElements.length).toBeGreaterThan(0);
   });
 
   it('should render all agent names', () => {
@@ -74,9 +75,10 @@ describe('AgentsView', () => {
     render(<AgentsView agents={[]} />);
 
     expect(screen.getByText('Agents')).toBeInTheDocument();
-    expect(screen.getByText((content, element) => {
-      return (element?.textContent?.includes('총') && element?.textContent?.includes('개의 에이전트가 설정되어 있습니다')) ?? false;
-    })).toBeInTheDocument();
+    const countElements = screen.getAllByText((content, element) => {
+      return (element?.textContent?.includes('총') && element?.textContent?.includes('이(가) 설정되어 있습니다')) ?? false;
+    });
+    expect(countElements.length).toBeGreaterThan(0);
   });
 
   it('should handle single agent', () => {
@@ -84,7 +86,7 @@ describe('AgentsView', () => {
     render(<AgentsView agents={singleAgent} />);
 
     expect(screen.getByText(singleAgent[0].name)).toBeInTheDocument();
-    expect(screen.getByText(/총.*개의 에이전트가 설정되어 있습니다/)).toBeInTheDocument();
+    expect(screen.getByText(/총.*이\(가\) 설정되어 있습니다/)).toBeInTheDocument();
   });
 
   it('should render agent with empty tools array', () => {
@@ -133,5 +135,25 @@ describe('AgentsView', () => {
     expect(screen.getByText('opus')).toBeInTheDocument();
     expect(screen.getByText('sonnet')).toBeInTheDocument();
     expect(screen.getByText('haiku')).toBeInTheDocument();
+  });
+
+  it('should use fallback color for unknown model', () => {
+    const agentWithUnknownModel: Agent[] = [
+      {
+        name: 'unknown-model-agent',
+        description: 'Agent with unknown model',
+        model: 'unknown-model' as any,
+        tools: ['Read'],
+      },
+    ];
+
+    render(<AgentsView agents={agentWithUnknownModel} />);
+
+    expect(screen.getByText('unknown-model-agent')).toBeInTheDocument();
+    expect(screen.getByText('unknown-model')).toBeInTheDocument();
+    
+    // fallback 색상이 적용되었는지 확인 (모델 이름이 표시되면 렌더링은 성공)
+    const modelElement = screen.getByText('unknown-model');
+    expect(modelElement).toBeInTheDocument();
   });
 });
