@@ -1,13 +1,8 @@
 {
   "version": 1,
   "hooks": {
-    "sessionStart": [{ "command": "bash ./hooks/session-start.sh" }],
-    "sessionEnd": [{ "command": "bash ./hooks/session-end.sh" }],
     "beforeShellExecution": [
-      {
-        "command": "bash ./hooks/check-shell.sh",
-        "timeout": 30
-      }
+      { "command": "bash ./hooks/check-shell.sh", "timeout": 30 }
     ],
     "postToolUse": [
       { "command": "bash ./hooks/post-cmd.sh", "matcher": "Shell" },
