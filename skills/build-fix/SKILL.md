@@ -1,35 +1,33 @@
 ---
 name: build-fix
-description: Build and Fix - incrementally fix TypeScript and build errors
+description: Build and Fix - incrementally fix TypeScript and build errors. Invokes build-error-resolver agent.
 disable-model-invocation: true
 ---
 
-# Build and Fix
+# Build and Fix Command
 
-Incrementally fix TypeScript and build errors:
+This command invokes the **build-error-resolver** agent to fix TypeScript, compilation, and build errors with minimal diffs.
 
-1. Run build: npm run build or pnpm build or npm run tauri:build (if use tauri)
+## What This Command Does
 
-2. Parse error output:
-   - Group by file
-   - Sort by severity
+1. **Diagnose** - Run tsc, eslint, npm run build
+2. **Fix incrementally** - One error at a time, minimal changes
+3. **No architecture changes** - Only fix errors, no refactoring
+4. **Verify** - Re-run build after each fix
 
-3. For each error:
-   - Show error context (5 lines before/after)
-   - Explain the issue
-   - Propose fix
-   - Apply fix
-   - Re-run build
-   - Verify error resolved
+## When to Use
 
-4. Stop if:
-   - Fix introduces new errors
-   - Same error persists after 3 attempts
-   - User requests pause
+Use `/build-fix` when:
+- Build fails (TypeScript, compilation, module resolution)
+- Type errors occur
+- Import/export or dependency issues
+- Configuration errors (tsconfig, webpack, Next.js)
 
-5. Show summary:
-   - Errors fixed
-   - Errors remaining
-   - New errors introduced
+## How It Works
 
-Fix one error at a time for safety!
+The build-error-resolver agent uses tsc --noEmit, ESLint, and project build commands to diagnose and fix errors with the smallest possible changes. It does not refactor or redesign.
+
+## Related
+
+- Agent: `agents/build-error-resolver.md`
+- Use **build-fix** proactively when build is red

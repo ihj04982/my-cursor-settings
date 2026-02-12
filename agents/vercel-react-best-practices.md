@@ -1,3 +1,10 @@
+---
+name: vercel-react-best-practices
+description: React and Next.js performance optimization reference (Vercel Engineering). 57 rules across 8 categories. Use when writing, reviewing, or refactoring React/Next.js code. Full content lives here; skill provides trigger and quick index.
+tools: Read, Write, Edit, Grep
+model: opus
+---
+
 # React Best Practices
 
 **Version 1.0.0**  
