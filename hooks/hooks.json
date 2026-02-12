@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [{ "command": "bash ./hooks/session-start.sh" }],
+    "sessionEnd": [{ "command": "bash ./hooks/session-end.sh" }],
+    "beforeShellExecution": [
+      {
+        "command": "bash ./hooks/check-shell.sh",
+        "timeout": 30
+      }
+    ],
+    "postToolUse": [
+      { "command": "bash ./hooks/post-cmd.sh", "matcher": "Shell" },
+      { "command": "bash ./hooks/build-done.sh", "matcher": "Shell" }
+    ],
+    "afterFileEdit": [{ "command": "bash ./hooks/process-edit.sh" }],
+    "preCompact": [{ "command": "bash ./hooks/pre-compact.sh" }],
+    "stop": [{ "command": "bash ./hooks/stop-audit.sh" }]
+  }
+}

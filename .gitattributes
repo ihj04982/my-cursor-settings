@@ -1,0 +1,3 @@
+# Hook scripts must use LF so bash runs correctly on Windows (Git Bash/WSL).
+hooks/*.sh text eol=lf
+hooks/test-fixture.js text eol=lf
