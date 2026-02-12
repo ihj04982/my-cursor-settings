@@ -1,46 +1,34 @@
 ---
 name: code-review
-description: Code Review - comprehensive security and quality review of uncommitted changes
+description: Code Review - comprehensive security and quality review of uncommitted changes. Invokes code-reviewer agent.
 disable-model-invocation: true
 ---
 
-# Code Review
+# Code Review Command
 
-Comprehensive security and quality review of uncommitted changes:
+This command invokes the **code-reviewer** agent to perform comprehensive security and quality review of uncommitted changes.
 
-1. Get changed files: git diff --name-only HEAD
+## What This Command Does
 
-2. For each changed file, check for:
+1. **Run git diff** to identify changed files
+2. **Security review** - Hardcoded secrets, injection risks, input validation, OWASP Top 10
+3. **Code quality** - Function/file size, nesting, error handling, naming
+4. **Generate report** - CRITICAL, HIGH, MEDIUM, LOW with locations and suggested fixes
+5. **Block commit** if CRITICAL or HIGH issues found
 
-**Security Issues (CRITICAL):**
-- Hardcoded credentials, API keys, tokens
-- SQL injection vulnerabilities
-- XSS vulnerabilities  
-- Missing input validation
-- Insecure dependencies
-- Path traversal risks
+## When to Use
 
-**Code Quality (HIGH):**
-- Functions > 50 lines
-- Files > 800 lines
-- Nesting depth > 4 levels
-- Missing error handling
-- console.log statements
-- TODO/FIXME comments
-- Missing JSDoc for public APIs
+Use `/code-review` when:
+- After writing or modifying code (MUST BE USED for all code changes)
+- Before committing changes
+- When security-sensitive code was added (auth, API, user input)
+- When preparing for PR/code review
 
-**Best Practices (MEDIUM):**
-- Mutation patterns (use immutable instead)
-- Emoji usage in code/comments
-- Missing tests for new code
-- Accessibility issues (a11y)
+## How It Works
 
-3. Generate report with:
-   - Severity: CRITICAL, HIGH, MEDIUM, LOW
-   - File location and line numbers
-   - Issue description
-   - Suggested fix
+The code-reviewer agent will run git diff, focus on modified files, and provide feedback organized by priority (Critical → Warnings → Suggestions) with specific fix examples.
 
-4. Block commit if CRITICAL or HIGH issues found
+## Related
 
-Never approve code with security vulnerabilities!
+- Agent: `agents/code-reviewer.md`
+- Use **security-reviewer** for deeper security audits on auth/API/payment code

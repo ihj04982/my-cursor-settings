@@ -116,21 +116,8 @@ Reference these guidelines when:
 - `advanced-init-once` - Initialize app once per app load
 - `advanced-use-latest` - useLatest for stable callback refs
 
-## How to Use
+## Source of Truth
 
-Read individual rule files for detailed explanations and code examples:
+**Full document**: `agents/vercel-react-best-practices.md` — 57 rules with detailed explanations, incorrect vs correct examples, and impact metrics. This skill provides the trigger and quick index; the agent document is the single source for implementation details.
 
-```
-rules/async-parallel.md
-rules/bundle-barrel-imports.md
-```
-
-Each rule file contains:
-- Brief explanation of why it matters
-- Incorrect code example with explanation
-- Correct code example with explanation
-- Additional context and references
-
-## Full Compiled Document
-
-For the complete guide with all rules expanded: `AGENTS.md`
+Individual rules also exist as granular skills (e.g. `defer-await-until-needed`, `avoid-barrel-file-imports`) for targeted context.
