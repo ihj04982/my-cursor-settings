@@ -1,6 +1,6 @@
 ---
 name: use-explicit-conditional-rendering
-description: Use Explicit Conditional Rendering
+description: Use explicit conditional rendering (if/ternary) instead of truthy shortcuts when null/undefined matter. Use when avoiding accidental render of 0 or "".
 ---
 
 ## Use Explicit Conditional Rendering

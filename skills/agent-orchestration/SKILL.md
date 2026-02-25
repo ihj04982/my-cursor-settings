@@ -1,6 +1,6 @@
 ---
 name: agent-orchestration
-description: Agent Orchestration
+description: Lists available Cursor agents (planner, architect, tdd-guide, code-reviewer, security-reviewer, build-error-resolver, e2e-runner, refactor-cleaner, doc-updater) and when to use each. Use when the user asks which agent to use, how to delegate work, or what agents are available.
 ---
 
 # Agent Orchestration

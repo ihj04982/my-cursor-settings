@@ -1,6 +1,6 @@
 ---
 name: dependency-based-parallelization
-description: Dependency-Based Parallelization
+description: Run independent operations in parallel; sequence only when there are dependencies. Use when optimizing build scripts, data pipelines, or multi-step async work.
 ---
 
 ## Dependency-Based Parallelization

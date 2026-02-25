@@ -1,6 +1,6 @@
 ---
 name: early-length-check-for-array-comparisons
-description: Early Length Check for Array Comparisons
+description: Do an early length check when comparing arrays to short-circuit when lengths differ. Use when implementing equality or diff logic.
 ---
 
 ## Early Length Check for Array Comparisons

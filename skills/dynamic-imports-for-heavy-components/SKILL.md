@@ -1,6 +1,6 @@
 ---
 name: dynamic-imports-for-heavy-components
-description: Dynamic Imports for Heavy Components
+description: Use dynamic imports for heavy components to split bundles and lazy-load. Use when adding charts, editors, or large dependencies.
 ---
 
 ## Dynamic Imports for Heavy Components

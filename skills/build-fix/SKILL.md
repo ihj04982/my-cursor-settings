@@ -1,6 +1,6 @@
 ---
 name: build-fix
-description: Build and Fix - incrementally fix TypeScript and build errors. Invokes build-error-resolver agent.
+description: Incrementally fix TypeScript and build errors. Invokes build-error-resolver agent. Use when build fails, type errors occur, or the user asks to fix the build.
 disable-model-invocation: true
 ---
 

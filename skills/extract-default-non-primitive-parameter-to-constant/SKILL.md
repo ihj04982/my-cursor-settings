@@ -1,6 +1,6 @@
 ---
 name: extract-default-non-primitive-parameter-to-constant
-description: Extract Default Non-primitive Parameter Value from Memoized Component to Constant
+description: Extract default non-primitive parameter values to constants outside the component to avoid breaking memo. Use when passing default objects/arrays as props.
 ---
 
 ## Extract Default Non-primitive Parameter Value from Memoized Component to Constant

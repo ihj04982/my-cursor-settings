@@ -1,6 +1,6 @@
 ---
 name: build-index-maps-for-repeated-lookups
-description: Build Index Maps for Repeated Lookups
+description: Build index maps (id → item) for repeated lookups instead of scanning arrays. Use when looking up by id or key repeatedly.
 ---
 
 ## Build Index Maps for Repeated Lookups

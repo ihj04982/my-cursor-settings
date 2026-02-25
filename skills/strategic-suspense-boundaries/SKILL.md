@@ -1,6 +1,6 @@
 ---
 name: strategic-suspense-boundaries
-description: Strategic Suspense Boundaries
+description: Place Suspense boundaries strategically to control loading granularity and avoid full-page spinners. Use when implementing or reviewing React Suspense and streaming.
 ---
 
 ## Strategic Suspense Boundaries

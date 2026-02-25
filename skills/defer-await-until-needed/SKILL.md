@@ -1,6 +1,6 @@
 ---
 name: defer-await-until-needed
-description: Defer Await Until Needed
+description: Defer await until the value is actually needed to avoid blocking. Use when optimizing async flow or avoiding unnecessary serialization.
 ---
 
 ## Defer Await Until Needed

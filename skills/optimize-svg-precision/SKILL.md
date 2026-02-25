@@ -1,6 +1,6 @@
 ---
 name: optimize-svg-precision
-description: Optimize SVG Precision
+description: Optimize SVG precision (decimal places, path simplification) to reduce file size. Use when cleaning or minifying SVG assets.
 ---
 
 ## Optimize SVG Precision

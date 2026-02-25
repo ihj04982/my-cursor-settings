@@ -1,11 +1,7 @@
 ---
 name: e2e
-description: E2E Command - generate and run end-to-end tests with Playwright
+description: Generate and run end-to-end tests with Playwright. Invokes e2e-runner agent. Creates test journeys, runs tests, captures screenshots/videos/traces, and uploads artifacts. Use when testing critical user journeys or multi-step flows.
 disable-model-invocation: true
----
-
----
-description: Generate and run end-to-end tests with Playwright. Creates test journeys, runs tests, captures screenshots/videos/traces, and uploads artifacts.
 ---
 
 # E2E Command

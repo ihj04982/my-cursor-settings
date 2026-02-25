@@ -1,6 +1,6 @@
 ---
 name: defer-non-critical-third-party-libraries
-description: Defer Non-Critical Third-Party Libraries
+description: Defer loading non-critical third-party scripts until after initial render or on interaction. Use when optimizing LCP or TTI.
 ---
 
 ## Defer Non-Critical Third-Party Libraries

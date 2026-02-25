@@ -1,6 +1,6 @@
 ---
 name: subscribe-to-derived-state
-description: Subscribe to Derived State
+description: Subscribe to derived state (e.g. from external store) instead of copying into local state when possible. Use when syncing with store or avoiding duplicate source of truth.
 ---
 
 ## Subscribe to Derived State

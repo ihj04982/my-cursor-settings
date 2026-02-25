@@ -1,6 +1,6 @@
 ---
 name: parallel-data-fetching-with-component-composition
-description: Parallel Data Fetching with Component Composition
+description: Fetch data in parallel by composing components that each fetch their own data (and wrap in Suspense). Use when designing RSC or app router data loading.
 ---
 
 ## Parallel Data Fetching with Component Composition

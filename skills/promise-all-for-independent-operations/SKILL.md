@@ -1,6 +1,6 @@
 ---
 name: promise-all-for-independent-operations
-description: Promise.all() for Independent Operations
+description: Use Promise.all() for independent async operations instead of sequential await. Use when fetching multiple resources or running parallel async tasks.
 ---
 
 ## Promise.all() for Independent Operations

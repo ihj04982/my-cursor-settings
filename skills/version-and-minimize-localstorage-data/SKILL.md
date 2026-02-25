@@ -1,6 +1,6 @@
 ---
 name: version-and-minimize-localstorage-data
-description: Version and Minimize localStorage Data
+description: Version and minimize data stored in localStorage for compatibility and quota. Use when persisting user prefs or app state to localStorage.
 ---
 
 ## Version and Minimize localStorage Data

@@ -1,6 +1,6 @@
 ---
 name: avoid-layout-thrashing
-description: Avoid Layout Thrashing
+description: Avoid layout thrashing (read-write-read cycles that force reflows). Use when optimizing DOM reads/writes in loops or animation code.
 ---
 
 ## Avoid Layout Thrashing

@@ -1,6 +1,6 @@
 ---
 name: cache-property-access-in-loops
-description: Cache Property Access in Loops
+description: Cache property access in loops (e.g. array length, object ref) to avoid repeated lookups. Use when optimizing hot loops.
 ---
 
 ## Cache Property Access in Loops

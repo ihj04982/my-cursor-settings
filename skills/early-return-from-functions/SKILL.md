@@ -1,6 +1,6 @@
 ---
 name: early-return-from-functions
-description: Early Return from Functions
+description: Use early returns to reduce nesting and clarify control flow. Use when simplifying conditionals or guard clauses.
 ---
 
 ## Early Return from Functions

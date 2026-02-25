@@ -1,6 +1,6 @@
 ---
 name: use-after-for-non-blocking-operations
-description: Use after() for Non-Blocking Operations
+description: Use after() or similar for fire-and-forget or deferred work that shouldn't block the main flow. Use when scheduling non-critical side effects.
 ---
 
 ## Use after() for Non-Blocking Operations

@@ -1,6 +1,6 @@
 ---
 name: prevent-hydration-mismatch-without-flickering
-description: Prevent Hydration Mismatch Without Flickering
+description: Prevent hydration mismatch without visible flicker (suppressExpectedHydrationMismatch, defer client-only UI). Use when fixing SSR/client hydration errors.
 ---
 
 ## Prevent Hydration Mismatch Without Flickering

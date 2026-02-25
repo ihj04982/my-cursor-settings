@@ -1,6 +1,6 @@
 ---
 name: calculate-derived-state-during-rendering
-description: Calculate Derived State During Rendering
+description: Calculate derived state during rendering instead of in useEffect when it's a pure function of props/state. Use when simplifying state and avoiding sync effects.
 ---
 
 ## Calculate Derived State During Rendering

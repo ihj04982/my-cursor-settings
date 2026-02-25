@@ -1,6 +1,6 @@
 ---
 name: suppress-expected-hydration-mismatches
-description: Suppress Expected Hydration Mismatches
+description: Suppress expected hydration mismatches (e.g. date, random id) where server and client deliberately differ. Use when fixing React hydration warnings safely.
 ---
 
 ## Suppress Expected Hydration Mismatches

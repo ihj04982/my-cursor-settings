@@ -1,11 +1,7 @@
 ---
 name: plan
-description: Plan Command - restate requirements and create implementation plan
+description: Restate requirements, assess risks, and create step-by-step implementation plan. Invokes planner agent. WAIT for user CONFIRM before touching any code. Use when starting a new feature, making architectural changes, or requirements are unclear.
 disable-model-invocation: true
----
-
----
-description: Restate requirements, assess risks, and create step-by-step implementation plan. WAIT for user CONFIRM before touching any code.
 ---
 
 # Plan Command

@@ -1,6 +1,6 @@
 ---
 name: useeffectevent-for-stable-callback-refs
-description: useEffectEvent for Stable Callback Refs
+description: Use useEffectEvent for stable callback refs that can read latest props/state without being in effect deps. Use when effects need latest callbacks without re-running.
 ---
 
 ## useEffectEvent for Stable Callback Refs

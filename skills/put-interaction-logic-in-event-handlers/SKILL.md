@@ -1,6 +1,6 @@
 ---
 name: put-interaction-logic-in-event-handlers
-description: Put Interaction Logic in Event Handlers
+description: Put interaction logic in event handlers rather than in useEffect when it's a direct response to user action. Use when handling clicks, submit, or input.
 ---
 
 ## Put Interaction Logic in Event Handlers

@@ -1,6 +1,6 @@
 ---
 name: hooks-system-cursor-implementation
-description: Hooks System (Cursor Implementation)
+description: Cursor hooks system implementation details. Use when configuring or debugging Cursor agent hooks, subagents, or workflow triggers.
 ---
 
 # Hooks System (Cursor Implementation)

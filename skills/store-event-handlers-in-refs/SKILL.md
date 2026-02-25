@@ -1,6 +1,6 @@
 ---
 name: store-event-handlers-in-refs
-description: Store Event Handlers in Refs
+description: Store event handlers in refs to avoid stale closures and unnecessary re-renders. Use when passing callbacks to children or when handler identity causes effect re-runs.
 ---
 
 ## Store Event Handlers in Refs

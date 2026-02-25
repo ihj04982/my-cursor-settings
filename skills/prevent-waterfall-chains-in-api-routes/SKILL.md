@@ -1,6 +1,6 @@
 ---
 name: prevent-waterfall-chains-in-api-routes
-description: Prevent Waterfall Chains in API Routes
+description: Prevent sequential await chains in API routes; fetch in parallel. Use when building or refactoring API routes that call multiple data sources.
 ---
 
 ## Prevent Waterfall Chains in API Routes

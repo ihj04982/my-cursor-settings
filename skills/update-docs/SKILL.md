@@ -1,6 +1,6 @@
 ---
 name: update-docs
-description: Update Documentation - sync documentation from source-of-truth
+description: Sync documentation from source-of-truth (package.json, .env.example). Generates CONTRIB.md, RUNBOOK.md. Use when updating project docs or after adding scripts/env vars.
 disable-model-invocation: true
 ---
 

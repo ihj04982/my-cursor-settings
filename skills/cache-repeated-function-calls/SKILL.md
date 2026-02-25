@@ -1,6 +1,6 @@
 ---
 name: cache-repeated-function-calls
-description: Cache Repeated Function Calls
+description: Cache results of repeated pure function calls (memoization). Use when the same computation runs multiple times with same inputs.
 ---
 
 ## Cache Repeated Function Calls

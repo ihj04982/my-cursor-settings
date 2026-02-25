@@ -1,6 +1,6 @@
 ---
 name: git-workflow
-description: Git Workflow
+description: Commit message format (feat, fix, refactor, docs, test, chore, perf, ci) and pull request workflow. Use when writing commit messages, creating PRs, or following git conventions.
 ---
 
 Git Workflow

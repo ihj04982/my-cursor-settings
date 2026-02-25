@@ -1,6 +1,6 @@
 ---
 name: cache-storage-api-calls
-description: Cache Storage API Calls
+description: Cache Storage API responses where appropriate (SWR, React Query, or custom). Use when fetching data that can be reused across requests or time.
 ---
 
 ## Cache Storage API Calls

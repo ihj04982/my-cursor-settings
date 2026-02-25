@@ -1,6 +1,6 @@
 ---
 name: combine-multiple-array-iterations
-description: Combine Multiple Array Iterations
+description: Combine multiple array iterations into one pass to reduce overhead. Use when mapping/filtering/reducing over the same array several times.
 ---
 
 ## Combine Multiple Array Iterations

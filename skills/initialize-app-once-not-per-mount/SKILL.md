@@ -1,6 +1,6 @@
 ---
 name: initialize-app-once-not-per-mount
-description: Initialize App Once, Not Per Mount
+description: Initialize app or SDK once at module load, not on every component mount. Use when setting up analytics, error tracking, or global clients in React.
 ---
 
 ## Initialize App Once, Not Per Mount

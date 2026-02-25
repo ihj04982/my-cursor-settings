@@ -1,6 +1,6 @@
 ---
 name: css-content-visibility-for-long-lists
-description: CSS content-visibility for Long Lists
+description: Use CSS content-visibility for long lists to skip offscreen rendering. Use when optimizing scroll performance of long feeds or tables.
 ---
 
 ## CSS content-visibility for Long Lists

@@ -1,6 +1,6 @@
 ---
 name: avoid-barrel-file-imports
-description: Avoid Barrel File Imports
+description: Avoid barrel (index) file re-exports that pull in entire trees; import from concrete modules. Use when fixing bundle size or tree-shaking issues.
 ---
 
 ## Avoid Barrel File Imports

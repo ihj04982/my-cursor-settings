@@ -1,6 +1,6 @@
 ---
 name: use-swr-for-automatic-deduplication
-description: Use SWR for Automatic Deduplication
+description: Use SWR (or similar) for request deduplication and caching. Use when implementing data fetching to avoid duplicate in-flight requests.
 ---
 
 ## Use SWR for Automatic Deduplication

@@ -1,6 +1,6 @@
 ---
 name: preload-based-on-user-intent
-description: Preload Based on User Intent
+description: Preload routes or assets when user shows intent (hover, focus) to improve perceived performance. Use when optimizing navigation or critical flows.
 ---
 
 ## Preload Based on User Intent

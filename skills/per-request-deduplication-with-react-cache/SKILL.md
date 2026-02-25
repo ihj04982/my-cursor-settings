@@ -1,6 +1,6 @@
 ---
 name: per-request-deduplication-with-react-cache
-description: Per-Request Deduplication with React.cache()
+description: Use React.cache() for per-request deduplication of async work in RSC. Use when fetching the same data in multiple components during one request.
 ---
 
 ## Per-Request Deduplication with React.cache()

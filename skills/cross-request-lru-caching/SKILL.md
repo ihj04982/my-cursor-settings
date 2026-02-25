@@ -1,6 +1,6 @@
 ---
 name: cross-request-lru-caching
-description: Cross-Request LRU Caching
+description: Use cross-request LRU caching for shared data (e.g. config, reference data) to avoid repeated work. Use when optimizing server or API that serves many requests.
 ---
 
 ## Cross-Request LRU Caching

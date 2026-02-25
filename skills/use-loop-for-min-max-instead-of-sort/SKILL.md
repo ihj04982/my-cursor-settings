@@ -1,6 +1,6 @@
 ---
 name: use-loop-for-min-max-instead-of-sort
-description: Use Loop for Min/Max Instead of Sort
+description: Use a single loop for min/max instead of sorting the whole array. Use when only the extreme value is needed.
 ---
 
 ## Use Loop for Min/Max Instead of Sort

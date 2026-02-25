@@ -1,6 +1,6 @@
 ---
 name: use-transitions-for-non-urgent-updates
-description: Use Transitions for Non-Urgent Updates
+description: Use startTransition (or useTransition) for non-urgent UI updates so urgent input stays responsive. Use when deferring heavy state updates.
 ---
 
 ## Use Transitions for Non-Urgent Updates

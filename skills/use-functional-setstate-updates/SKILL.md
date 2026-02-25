@@ -1,6 +1,6 @@
 ---
 name: use-functional-setstate-updates
-description: Use Functional setState Updates
+description: Use functional setState updates (updater function) when the new state depends on the previous. Use when batching or avoiding stale state in event handlers/async.
 ---
 
 ## Use Functional setState Updates

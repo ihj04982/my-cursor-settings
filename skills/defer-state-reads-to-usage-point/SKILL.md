@@ -1,6 +1,6 @@
 ---
 name: defer-state-reads-to-usage-point
-description: Defer State Reads to Usage Point
+description: Defer reading state to the point of use to avoid unnecessary re-renders or effect runs. Use when optimizing component boundaries and subscriptions.
 ---
 
 ## Defer State Reads to Usage Point

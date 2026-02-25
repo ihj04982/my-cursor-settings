@@ -1,6 +1,6 @@
 ---
 name: hoist-regexp-creation
-description: Hoist RegExp Creation
+description: Hoist RegExp creation outside loops or components so the same instance is reused. Use when using regex in hot paths.
 ---
 
 ## Hoist RegExp Creation

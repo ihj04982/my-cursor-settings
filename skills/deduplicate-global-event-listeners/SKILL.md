@@ -1,6 +1,6 @@
 ---
 name: deduplicate-global-event-listeners
-description: Deduplicate Global Event Listeners
+description: Register global event listeners once and share; avoid duplicate handlers. Use when handling resize, scroll, or keydown at app level.
 ---
 
 ## Deduplicate Global Event Listeners

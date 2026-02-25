@@ -1,6 +1,6 @@
 ---
 name: avoid-duplicate-serialization-in-rsc-props
-description: Avoid Duplicate Serialization in RSC Props
+description: Avoid passing the same serializable data through multiple layers in RSC; pass once or use cache. Use when optimizing RSC payload or avoiding serialization overhead.
 ---
 
 ## Avoid Duplicate Serialization in RSC Props

@@ -1,6 +1,6 @@
 ---
 name: use-tosorted-instead-of-sort-for-immutability
-description: Use toSorted() Instead of sort() for Immutability
+description: Use toSorted() (and similar) instead of mutating sort() when preserving the original array. Use when working with immutable data.
 ---
 
 ## Use toSorted() Instead of sort() for Immutability

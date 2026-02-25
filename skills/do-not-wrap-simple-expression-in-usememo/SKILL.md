@@ -1,6 +1,6 @@
 ---
 name: do-not-wrap-simple-expression-in-usememo
-description: Do not wrap a simple expression with a primitive result type in useMemo
+description: Do not wrap simple expressions with primitive results in useMemo; they are cheap. Use when reviewing or removing unnecessary useMemo.
 ---
 
 ## Do not wrap a simple expression with a primitive result type in useMemo

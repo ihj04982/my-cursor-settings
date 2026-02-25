@@ -1,6 +1,6 @@
 ---
 name: hoist-static-jsx-elements
-description: Hoist Static JSX Elements
+description: Hoist static JSX elements outside the component or memoize to avoid re-creating on each render. Use when reducing render cost of static UI.
 ---
 
 ## Hoist Static JSX Elements

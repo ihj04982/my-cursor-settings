@@ -1,6 +1,6 @@
 ---
 name: test-coverage
-description: Test Coverage - analyze coverage and generate missing tests
+description: Analyze test coverage and generate missing tests to reach 80%+ coverage. Use when coverage is low, after adding features, or when the user asks to improve test coverage.
 disable-model-invocation: true
 ---
 

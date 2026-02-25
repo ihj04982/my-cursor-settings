@@ -1,6 +1,6 @@
 ---
 name: refactor-clean
-description: Refactor Clean - safely identify and remove dead code with test verification. Invokes refactor-cleaner agent.
+description: Safely identify and remove dead code with test verification. Invokes refactor-cleaner agent. Use when cleaning unused code, removing duplicates, or reducing bundle size.
 disable-model-invocation: true
 ---
 

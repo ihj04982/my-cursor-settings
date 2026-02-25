@@ -1,6 +1,6 @@
 ---
 name: animate-svg-wrapper-instead-of-svg-element
-description: Animate SVG Wrapper Instead of SVG Element
+description: Animate an SVG wrapper (e.g. div) instead of the SVG element for better compatibility. Use when animating SVG icons or graphics.
 ---
 
 ## Animate SVG Wrapper Instead of SVG Element

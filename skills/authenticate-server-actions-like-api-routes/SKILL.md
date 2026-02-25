@@ -1,6 +1,6 @@
 ---
 name: authenticate-server-actions-like-api-routes
-description: Authenticate Server Actions Like API Routes
+description: Authenticate server actions with the same rigor as API routes (session, token, CSRF). Use when implementing or securing Next.js server actions.
 ---
 
 ## Authenticate Server Actions Like API Routes

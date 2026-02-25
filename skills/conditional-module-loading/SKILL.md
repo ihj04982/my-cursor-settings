@@ -1,6 +1,6 @@
 ---
 name: conditional-module-loading
-description: Conditional Module Loading
+description: Load heavy modules conditionally (dynamic import or require) when the feature is used. Use when reducing initial bundle or code-splitting.
 ---
 
 ## Conditional Module Loading

@@ -1,6 +1,6 @@
 ---
 name: update-codemaps
-description: Update Codemaps - analyze codebase structure and update architecture documentation
+description: Analyze codebase structure and update architecture documentation (codemaps/). Use when documenting architecture, onboarding, or after major refactors.
 disable-model-invocation: true
 ---
 

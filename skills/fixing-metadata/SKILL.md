@@ -1,6 +1,6 @@
 ---
 name: fixing-metadata
-description: Ship correct, complete metadata.
+description: Ship correct, complete metadata (title, description, OG, Twitter). Use when adding or fixing SEO and social previews for pages.
 ---
 
 # fixing-metadata

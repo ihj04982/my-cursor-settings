@@ -1,6 +1,6 @@
 ---
 name: use-useref-for-transient-values
-description: Use useRef for Transient Values
+description: Use useRef for transient values that don't need to trigger re-renders (e.g. previous value, timeout id). Use when keeping mutable refs without causing render.
 ---
 
 ## Use useRef for Transient Values

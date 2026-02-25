@@ -1,6 +1,6 @@
 ---
 name: narrow-effect-dependencies
-description: Narrow Effect Dependencies
+description: Keep effect dependency arrays minimal and stable. Use when fixing useEffect/useLayoutEffect or reducing unnecessary effect re-runs.
 ---
 
 ## Narrow Effect Dependencies

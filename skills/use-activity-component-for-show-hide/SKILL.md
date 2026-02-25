@@ -1,6 +1,6 @@
 ---
 name: use-activity-component-for-show-hide
-description: Use Activity Component for Show/Hide
+description: Use Activity (or similar) component for show/hide to avoid layout jumps. Use when toggling visibility without unmounting.
 ---
 
 ## Use Activity Component for Show/Hide

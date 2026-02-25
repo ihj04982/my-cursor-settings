@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Code Review - comprehensive security and quality review of uncommitted changes. Invokes code-reviewer agent.
+description: Comprehensive security and quality review of uncommitted changes. Invokes code-reviewer agent. Use when reviewing PRs, before committing, or when the user asks for a code review.
 disable-model-invocation: true
 ---
 
